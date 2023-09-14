@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongTo;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Product extends Model
 {
@@ -12,6 +12,11 @@ class Product extends Model
 
     public function category(): BelongsTo
     {
-        return $this->belogsTo(Category::class);
+        return $this->belongsTo(Category::class);
+    }
+
+    public function review(): BelongsTo
+    {
+        return $this->belongsTo(Review::class);
     }
 }

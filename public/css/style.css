@@ -2394,3 +2394,79 @@ h2 {
         text-align: center; 
     } 
 }
+
+.banner{
+    width: 100%;
+}
+
+#imagen_banner{
+    background-image: url("../img/banner_etica.jpg");
+    background-color: #fff;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding-left: 90px;
+    font-size: xx-large;
+}
+
+.seccion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    color: #29327b;
+    font-family: sans-serif;
+    font-size: larger;
+}
+
+.seccion .row{
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.seccion h5{
+    color: #00a896;
+}
+
+.cuadro_gris{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ececec;
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+}
+
+.cuadro_quejas{
+    width: 100rem;
+    display: inline;
+    justify-content: end;
+}
+
+.cuadro_quejas input{
+    width: 100%;
+}
+
+.cuadro_quejas textarea{
+    width: 100%;
+}
+
+.form_quejas{
+    background-color: #FF6F61;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 2%;
+}
+
+.form_quejas label{
+    color: #fff;
+}
+
+.form-control{
+    width: 500px;
+}

@@ -14,13 +14,14 @@ use App\Http\Controllers\SiteController;
 */
 
 
-Route::get('/', function () {
-    return view('e-commerce.index');
-});
+Route::get('/', function () {return view('e-commerce.index');})->name("index");
 
-Route::get('/product-list/{category_id?}', [SiteController::class, 'product_list']);
-
-
+Route::get('/product-list/{category_id?}', [SiteController::class, 'product_list'])->name("product-list");
+Route::get('/productByCat', [SiteController::class, 'productsByCategory'])->name("productsByCategory");
+Route::get('/contact', [SiteController::class, 'contact'])->name("contact");
+Route::post('/contact', [SiteController::class, 'contact'])->name("contact_post");
+Route::get('/product-detail/{id}', [SiteController::class, 'detail'])->name("details");
+Route::post('/product-detail/{id}', [SiteController::class, 'review'])->name("review_post");
 /*
 Route::get('/greeting', function () {
     return 'Hello World';
