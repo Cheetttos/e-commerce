@@ -13,6 +13,9 @@ use App\Mail\contactMail;
 class SiteController extends Controller
 {
     //
+    public function products_table(){
+        return view('e-commerce.products-api');
+    }
 
     public function product_list($category_id=null){
         $categories = Category::all();

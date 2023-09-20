@@ -20,3 +20,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/products', [ApiEcommerceController::class, 'products'])->name("ApiProducts");
+Route::get('/categories', [ApiEcommerceController::class, 'categories'])->name("api_categories");
+
+Route::get('/products/{category_id?}', [ApiEcommerceController::class, 'products'])->name("products");
+Route::get('/products-table/{category_id?}', function () {
+    return view('e-commerce.products-api');
+});
+Route::get('/categories', [ApiEcommerceController::class, 'categories'])->name("api_categories");

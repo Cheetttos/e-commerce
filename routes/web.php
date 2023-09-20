@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApiEcommerceController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
 /*
@@ -22,6 +23,9 @@ Route::get('/contact', [SiteController::class, 'contact'])->name("contact");
 Route::post('/contact', [SiteController::class, 'contact'])->name("contact_post");
 Route::get('/product-detail/{id}', [SiteController::class, 'detail'])->name("details");
 Route::post('/product-detail/{id}', [SiteController::class, 'review'])->name("review_post");
+
+Route::get('/products-table/{category_id?}', [SiteController::class, 'products_table'])->name("product_table");
+
 /*
 Route::get('/greeting', function () {
     return 'Hello World';

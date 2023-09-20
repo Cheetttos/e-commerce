@@ -19,6 +19,10 @@
         <link href="{{asset('lib/slick/slick.css')}} " rel="stylesheet">
         <link href="{{asset('lib/slick/slick-theme.css')}} " rel="stylesheet">
 
+        <link href="https://cdn.datatables.net/v/dt/dt-1.13.6/datatables.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+
         <!-- Template Stylesheet -->
         <link href="{{asset('css/style.css')}} " rel="stylesheet">
     </head>
@@ -215,8 +219,10 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
         <script src="{{asset('lib/easing/easing.min.js')}} "></script>
         <script src="{{asset('lib/slick/slick.min.js')}} "></script>
-        
+        <script src="https://cdn.datatables.net/v/dt/dt-1.13.6/datatables.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
         <!-- Template Javascript -->
         <script src="{{asset('js/main.js')}} "></script>
+        <script src="{{asset('js/api.js')}} "></script>
     </body>
 </html>
