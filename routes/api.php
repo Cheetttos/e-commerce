@@ -27,3 +27,5 @@ Route::get('/products-table/{category_id?}', function () {
     return view('e-commerce.products-api');
 });
 Route::get('/categories', [ApiEcommerceController::class, 'categories'])->name("api_categories");
+
+Route::get('/orders', [ApiEcommerceController::class, 'orders'])->name("order_table");

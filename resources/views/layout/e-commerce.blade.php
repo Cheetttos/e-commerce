@@ -69,6 +69,7 @@
                                     <a href="contact" class="dropdown-item">Contact Us</a>
                                 </div>
                             </div>
+                            <a href="users" class="nav-item nav-link">Users</a>
                         </div>
                         <div class="navbar-nav ml-auto">
                             <div class="nav-item dropdown">

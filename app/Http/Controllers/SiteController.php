@@ -9,6 +9,7 @@ use App\Models\Contact;
 use App\Models\Review;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\contactMail;
+use Illuminate\Support\Facades\Http;
 
 class SiteController extends Controller
 {
@@ -16,6 +17,7 @@ class SiteController extends Controller
     public function products_table(){
         return view('e-commerce.products-api');
     }
+
 
     public function product_list($category_id=null){
         $categories = Category::all();
@@ -99,4 +101,25 @@ class SiteController extends Controller
         }
     }
 
+    public function admin_products(){
+        return view('e-commerce.admin-products');
+    }
+
+    public function admin_employees(){
+        $response = Http::get('http://127.0.0.1:3000/api/v1/employees');
+        $employees = $response->object();
+        return view('e-commerce.admin-employees',compact('employees'));
+    }
+
+    public function orders_table(){
+        $response = Http::get('http://127.0.0.1:3000/api/v1/orders');
+        $orders = $response->object();
+        return view('e-commerce.orders-api',compact('orders'));
+    }
+
+    public function users(){
+        $response = Http::get('http://127.0.0.1:3000/api/v1/users');
+        $users = $response->object();
+        return view('e-commerce.users-add');
+    }
 }

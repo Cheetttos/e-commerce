@@ -24,15 +24,14 @@ Route::post('/contact', [SiteController::class, 'contact'])->name("contact_post"
 Route::get('/product-detail/{id}', [SiteController::class, 'detail'])->name("details");
 Route::post('/product-detail/{id}', [SiteController::class, 'review'])->name("review_post");
 
+Route::get('/adminproducts',[SiteController::class, 'admin_products'])->name("admin_products");
+Route::get('/adminemployees',[SiteController::class, 'admin_employees'])->name("admin_employees");
+
 Route::get('/products-table/{category_id?}', [SiteController::class, 'products_table'])->name("product_table");
 
-/*
-Route::get('/greeting', function () {
-    return 'Hello World';
-});
+//Examen 2do
+Route::get('/orders-table', [SiteController::class, 'orders_table'])->name("order_table");
 
-Route::get('/', [SiteController::class, 'index']);
-Route::get('/services', [SiteController::class, 'services']);
-Route::get('/contact',[SiteController::class, 'contact']);
-Route::get('/product',[SiteController::class, 'product']);*/
-/*Route::get('/faq',[SiteController::class, 'faq']);*/
+Route::get('/users', [SiteController::class, 'users'])->name("users");
+Route::post('/users-add', [ApiEcommerceController::class, 'insert_user'])->name("insert_user");
+
